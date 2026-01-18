@@ -14,11 +14,12 @@ services:
           name: contractor-pro-db
           property: connectionString
       - key: JWT_SECRET
-        value: XoLfRNS1-Z0oNeeuiUPYl-p-0JlieOK-qpp5XjJWnhc
+        sync: false
       - key: VITE_APP_ID
         value: contractor-pro-app
       - key: OAUTH_SERVER_URL
         value: https://auth.manus.im
+
 
 databases:
   - name: contractor-pro-db
