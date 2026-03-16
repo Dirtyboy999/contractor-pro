@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import DashboardLayout from "./components/DashboardLayout";
 import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import Dashboard from "./pages/Dashboard";
 import Clients from "./pages/Clients";
 import ClientDetail from "./pages/ClientDetail";
@@ -78,6 +80,8 @@ function Router() {
       <Switch>
         <Route path={"/onboarding"} component={Onboarding} />
         <Route path={"/landing"} component={LandingPage} />
+        <Route path={"/privacy"} component={PrivacyPolicy} />
+        <Route path={"/terms"} component={TermsOfService} />
         <Route path={"/"} component={Home} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
@@ -104,6 +108,8 @@ function Router() {
         <Route path={"/payments"} component={Payments} />
         <Route path={"/payments/create"} component={PaymentCreate} />
         <Route path={"/settings"} component={Settings} />
+        <Route path={"/privacy"} component={PrivacyPolicy} />
+        <Route path={"/terms"} component={TermsOfService} />
         <Route path={"/notifications"} component={NotificationCenter} />
         <Route path={"/notification-settings"} component={NotificationSettings} />
         <Route path={"/portal/:token"} component={ClientPortal} />

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, BarChart3, Users, Zap, Clock } from "lucide-react";
 import { getLoginUrl } from "@/const";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 
 export default function Home() {
   const { isAuthenticated, loading } = useAuth();
@@ -139,6 +139,10 @@ export default function Home() {
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2026 ContractorPro. All rights reserved.</p>
+          <div className="mt-4 flex justify-center gap-6">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </footer>
     </div>
